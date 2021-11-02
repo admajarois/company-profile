@@ -19,6 +19,9 @@ const Home = {
                     </div>
                 </div>
             </div>
+            <div class="work-section">
+                <h1>What can i do ?</h1>
+            </div>
         `;
     },
     async afterRender() {
