@@ -3,7 +3,6 @@ import UrlParser from "../routes/url-parser";
 import routes from "../routes/routes";
 
 
-
 class App {
     constructor({button,  drawer, content}) {
         this._button = button;
@@ -19,7 +18,10 @@ class App {
             button: this._button,
             drawer: this._drawer,
         });
+
     }
+
+
     async renderPage() {
         const url = UrlParser.parseActiveurlWithCombiner();
         const page = routes[url];

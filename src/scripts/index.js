@@ -5,7 +5,7 @@ import App from './views/app';
 const app = new App ({
     content: document.querySelector('#mainContent'),
     button: document.querySelector('#hamburgerButton'),
-    drawer: document.querySelector('#navigationDrawer')
+    drawer: document.querySelector('#navigationDrawer'),
 });
 
 window.addEventListener('hashchange', ()=>{
@@ -15,3 +15,4 @@ window.addEventListener('hashchange', ()=>{
 window.addEventListener('load', ()=>{
     app.renderPage();
 });
+
