@@ -2,7 +2,7 @@
 
 $darkColor: #1B1B1B;
 $ligthColor: #FFFFFF;
-$pinkColor: #F389DC;
+$pinkColor: #f389dc;
 $celestialblueColor: #4199D9;
 $purpleColor: #361E98;
 $orangeColor: #F29D4F;
@@ -17,6 +17,7 @@ $barnredColor: #700808;
 $sealBrownColor: #592406;
 $animalColor: #A31C13;
 $fulvousColor: #DA7E12;
+$imageURL: url('/hero.png');
 
 @mixin gradient($startColor, $endColor, $orientation)
     @if $orientation == 'vertical'
@@ -36,25 +37,31 @@ body
     flex-direction: column;
     background-color: $darkColor;
 
-.bg-gradient-first
-    @include gradient($pinkColor , $purpleColor , vertical );
+.bg
+    &-gradient-first
+        @include gradient($pinkColor , #361e9827 , vertical );
 
-.bg-gradient-second
-    @include gradient($celestialblueColor, $purpleColor , vertical);
+    &-gradient-second
+        @include gradient($celestialblueColor, $purpleColor , vertical);
 
-.bg-gradient-third
-    @include gradient($brownColor, $orangeColor , vertical);
+    &-gradient-third
+        @include gradient($brownColor, $orangeColor , vertical);
 
-.
+    &-gradient-fourth
+        @include gradient($violinbrownColor, $yellowColor, vertical);
+    
+    &-gradient-fifth
+        @include gradient($lincolnGreenColor, $limegreenColor, vertical);
     
 
-
-
 .hero-bg
-    @include gradient($pinkColor , $purpleColor , vertical );
+    background-color: #1c7851;
+    background-image: $imageURL;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-blend-mode: multiply;
+    background-size: 70vh;
 
-.about-bg
-    @include gradient($celestialblueColor, $purpleColor , vertical);
     
     
 

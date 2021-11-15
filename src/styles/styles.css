@@ -18,8 +18,8 @@ body {
 }
 
 .bg-gradient-first {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F389DC), to(#361E98));
-  background: linear-gradient(to bottom, #F389DC, #361E98);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f389dc), to(#361e9827));
+  background: linear-gradient(to bottom, #f389dc, #361e9827);
 }
 
 .bg-gradient-second {
@@ -32,13 +32,22 @@ body {
   background: linear-gradient(to bottom, #710707, #F29D4F);
 }
 
-.hero-bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F389DC), to(#361E98));
-  background: linear-gradient(to bottom, #F389DC, #361E98);
+.bg-gradient-fourth {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5A5102), to(#F9F255));
+  background: linear-gradient(to bottom, #5A5102, #F9F255);
 }
 
-.about-bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(#4199D9), to(#361E98));
-  background: linear-gradient(to bottom, #4199D9, #361E98);
+.bg-gradient-fifth {
+  background: -webkit-gradient(linear, left top, left bottom, from(#084A06), to(#3DC53A));
+  background: linear-gradient(to bottom, #084A06, #3DC53A);
+}
+
+.hero-bg {
+  background-color: #1c7851;
+  background-image: url("/hero.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-blend-mode: multiply;
+  background-size: 70vh;
 }
 /*# sourceMappingURL=styles.css.map */
