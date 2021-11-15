@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+$darkColor: #1B1B1B;
+$ligthColor: #FFFFFF;
+$pinkColor: #F389DC;
+$celestialblueColor: #4199D9;
+$purpleColor: #361E98;
+$orangeColor: #F29D4F;
+$brownColor: #710707;
+$yellowColor: #F9F255;
+$violinbrownColor: #5A5102;
+$lincolnGreenColor: #084A06;
+$limegreenColor: #3DC53A;
+$junglegreenColor: #30AD8F;
+$iguanagreenColor: #71B880;
+$barnredColor: #700808;
+$sealBrownColor: #592406;
+$animalColor: #A31C13;
+$fulvousColor: #DA7E12;
+
+@mixin gradient($startColor, $endColor, $orientation)
+    @if $orientation == 'vertical'
+        background: linear-gradient(to bottom, $startColor, $endColor);
+    @else if $orientation == 'horizontal'
+        background: linear-gradient(to right, $startColor, $endColor);
+    
+
+* 
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+body
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $darkColor;
+
+.bg-gradient-first
+    @include gradient($pinkColor , $purpleColor , vertical );
+
+.bg-gradient-second
+    @include gradient($celestialblueColor, $purpleColor , vertical);
+
+.bg-gradient-third
+    @include gradient($brownColor, $orangeColor , vertical);
+
+.
+    
+
+
+
+.hero-bg
+    @include gradient($pinkColor , $purpleColor , vertical );
+
+.about-bg
+    @include gradient($celestialblueColor, $purpleColor , vertical);
+    
+    
+
+

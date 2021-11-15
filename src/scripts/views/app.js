@@ -8,19 +8,7 @@ class App {
         this._button = button;
         this._drawer = drawer;
         this._content = content;
-
-        this._initialAppShell();
     }
-
-    _initialAppShell() {
-        DrawerInitiator.init({
-            content: this._content,
-            button: this._button,
-            drawer: this._drawer,
-        });
-
-    }
-
 
     async renderPage() {
         const url = UrlParser.parseActiveurlWithCombiner();

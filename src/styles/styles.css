@@ -1,410 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
-    font-family: sans-serif;
-    font-size: 12px;
-    color: #556655;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1B1B1B;
 }
 
-
-/* Navbar */
-.app-bar {
-    padding: 8px 16px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    transition: all .5s ease-in-out;
-    background-color: #556655;
-    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); */
+.bg-gradient-first {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F389DC), to(#361E98));
+  background: linear-gradient(to bottom, #F389DC, #361E98);
 }
 
-.app-bar .app-bar_menu {
-    display: flex;
-    align-items: center;
+.bg-gradient-second {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4199D9), to(#361E98));
+  background: linear-gradient(to bottom, #4199D9, #361E98);
 }
 
-.app-bar .app-bar_menu button {
-    background-color: transparent;
-    color: #FFF;
-    border: none;
-    font-size: 18px;
-    padding: 8px;
-    cursor: pointer;
+.bg-gradient-third {
+  background: -webkit-gradient(linear, left top, left bottom, from(#710707), to(#F29D4F));
+  background: linear-gradient(to bottom, #710707, #F29D4F);
 }
 
-.app-bar .app-bar_brand {
-    display: flex;
-    align-items: center;
+.hero-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F389DC), to(#361E98));
+  background: linear-gradient(to bottom, #F389DC, #361E98);
 }
 
-.app-bar .app-bar_brand a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 25px;
-    user-select: none;
+.about-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4199D9), to(#361E98));
+  background: linear-gradient(to bottom, #4199D9, #361E98);
 }
-
-.app-bar .app-navbar {
-    position: absolute;
-    top: 50px;
-    left: -180px;
-    width: 150px;
-    transition: all 0.3s;
-    overflow: hidden;
-    background-color: #fff;
-}
-
-.app-bar .app-navbar.open {
-    left: 0;
-}
-
-.app-bar .app-navbar ul li a {
-    display: inline-block;
-    text-decoration: none;
-    color: #556655;
-    text-transform: uppercase;
-    padding: 8px;
-    margin-bottom: 5px;
-    font-size: 20px;
-    width: 100%;
-}
-
-.app-bar .app-navbar ul li a:hover {
-    background-color: #FFF;
-    color: #556655;
-}
-
-
-/* Main content */
-main {
-    flex: 1;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 500px;
-    margin: 15vh auto;
-    padding: 15px;
-    border: none;
-    background-color: #556655;
-}
-
-.h1-contact {
-    color: #FFF;
-}
-
-/* contact form */
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin: 20px 0;
-}
-
-input {
-    width: 100%;
-    margin: 5px 0;
-    height: 35px;
-    font-size: 17px;
-    text-align: center;
-    outline: none;
-}
-
-textarea {
-    width: 100%;
-    height: 75px;
-    margin: 5px 0;
-    font-size: 17px;
-    text-align: center;
-}
-
-#submit {
-    color: #556655;
-    background-color: #FFF;
-}
-
-
-/* end of contact form */
-
-.banner {
-    width: 100%;
-    padding: 20px 0;
-    height: auto;
-    background-color: #556655;
-    color: #FFF;
-}
-
-.banner-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner-img {
-    width: 240px;
-    height: 100%;
-}
-
-.text-container {
-    padding: 20px;
-    text-align: center;
-}
-
-.text-container h1{
-    font-size: 40px;
-}
-
-.text-container h2{
-    font-size: 35px;
-}
-
-.text-container p {
-    text-align: justify;
-    font-size: 20px;
-}
-
-.banner .banner-container .button-myself {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 15px;
-    bottom: 50px;
-    left: 50px;;
-}
-
-.banner .banner-container .button-myself a {
-    background-color: #FFF;
-    text-decoration: none;
-    font-size: 20px;
-    color: #556655;
-    font-weight: bold;
-    padding: 5px 10px;
-    box-shadow: -3px 4px 3px 1px rgba(0, 0, 0, 0.30);
-}
-
-/* .work-section {
-} */
-
-.work-section h1 {
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.work-section_row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.work-section_item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    padding: 20px;
-    background-color: #556655;
-    box-shadow: -3px 3px 2px 2px rgba(0, 0, 0, 0.26);
-    color: #FFF;
-}
-
-.work-section_item i{
-    font-size: 40px;
-}
-
-.work-section_item h2 {
-    font-size: 15px;
-    margin: 0 0 0 20px;
-}
-
-/* .skill-section {
-    padding: 20px 5px;
-    margin: 50px 0;
-} */
-
-.skill-section h1 {
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.skill-section_row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.skill-section_item {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    background-color: #556655;
-    color: #FFF;
-    box-shadow: -3px 3px 2px 2px rgba(0, 0, 0, 0.26);
-}
-
-.skill-section_item i, h2{
-    font-size: 35px;
-}
-
-/* 
-footer */
-
-footer {
-    padding: 16px;
-}
-
-footer p {
-    text-align: center;
-    color: #556655;
-    font-size: 18px;
-}
-
-
-/* 
-
-Responsive style 
-
-*/
-
-
-@media screen and (min-width: 740px) {
-    .app-bar {
-        grid-template-columns: 1fr auto;
-        padding: 8px 32px;
-    }
-
-    .app-bar .app-bar_menu {
-        display: none;
-    }
-
-    .app-bar .app-navbar {
-        position: static;
-        width: 100%;
-        background-color: transparent;
-    }
-
-    .app-bar .app-navbar ul li {
-        display: inline-block;
-    }
-
-    .app-bar .app-navbar ul li a {
-        display: inline-block;
-        width: 120px;
-        text-align: center;
-        margin: 0;
-        color: #FFF;
-    }
-
-    .banner-container {
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-    .banner-img {
-        width: 400px;
-        height: 100%;
-    }
-
-    .text-container {
-        text-align: justify;
-    }
-
-    .text-container h1 {
-        font-size: 50px;
-        font-weight: bold;
-    }
-
-    .text-container h2 {
-        font-size: 30px;
-        font-weight: bold;
-    }
-
-    .text-container p {
-        font-size: 20px;
-    }
-
-    .banner .banner-container .button-myself {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 15px;
-        bottom: 50px;
-        left: 50px;;
-        flex: none;
-        position: absolute;
-    }
-
-    .work-section_row {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .skill-section_row {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 25px;
-        margin-top: 20px;
-    }
-
-    .skill-section_item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .skill-section_item i, h2{
-        font-size: 50px;
-    }
-
-}
-
-/* @media screen and(min-width: 886px) {
-    .text-container h1 {
-        font-size: 75px;
-        font-weight: bold;
-    }
-
-    .text-container h2 {
-        font-size: 50px;
-        font-weight: bold;
-    }
-
-    .text-container p {
-        font-size: 30px;
-    }
-
-    .banner .banner-container .button-myself {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 15px;
-        bottom: 50px;
-        left: 50px;;
-        flex: none;
-        position: absolute;
-    }
-        
-} */
+/*# sourceMappingURL=styles.css.map */
