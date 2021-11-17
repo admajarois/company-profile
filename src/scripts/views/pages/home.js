@@ -1,4 +1,6 @@
 import image from '../../../public/hero.png';
+import icons from '../../globals/skills';
+import { skillTemplate } from '../templates/templateCreator';
 
 const Home = {
     async render() {
@@ -20,7 +22,7 @@ const Home = {
         
         <div class=container py-5>
             <div class="p-5 mb-4 bg-gradient-second rounded-3">
-                <div class="container-fluid py-5 d-xl-flex flex-column align-items-center">
+                <div class="container-fluid py-5 d-flex flex-column align-items-center">
                     <h1 class="display-5 fw-bold text-white">About me</h1>
                     <p class="col-md-8 fs-4 text-white text-center">I am a person who likes to learn new things and be creative.
                     I'm currently open to work as a freelancer
@@ -31,21 +33,32 @@ const Home = {
 
             <div class="row align-items-md-stretch">
                 <div class="col-md-6 mb-4">
-                    <div class="h-100 p-5 text-white bg-gradient-third rounded-3">
-                        <h2>Change the background</h2>
-                        <p>Swap the background-color utility and add a color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+                    <div class="h-100 p-5 text-white d-flex flex-column align-items-center bg-gradient-third rounded-3">
+                        <h2 class="fw-bold">What can i do?</h2>
+                        <div class="d-flex flex-column mt-3">
+                            <div class="card p-3 mb-3 bg-transparent border">
+                                <h2 class="text-center">Web Development</h2>
+                            </div>
+                            <div class="card p-3 mb-3 bg-transparent border">
+                                <h2 class="text-center">Android Development</h2>
+                            </div>
+                            <div class="card p-3 mb-3 bg-transparent border">
+                                <h2 class="text-center">UI & UX Design</h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="h-100 p-5 text-white bg-gradient-fourth rounded-3">
-                        <h2>Add borders</h2>
-                        <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+                        <h2 class="fw-bold text-center">My Skills</h2>
+                        <div class="row row-cols-4 row-cols-lg-4 g-2 g-lg-3" id="icons">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="p-5 mb-4 bg-gradient-fifth rounded-3">
-                <div class="container-fluid py-5 d-xl-flex flex-column align-items-center">
+                <div class="container-fluid py-5 d-flex flex-column align-items-center">
                     <h1 class="display-5 fw-bold text-white">My Work</h1>
                     <p class="col-md-8 fs-4 text-white text-center">I am a person who likes to learn new things and be creative.
                     I'm currently open to work as a freelancer
@@ -58,7 +71,10 @@ const Home = {
         `;
     },
     async afterRender() {
-        
+        const iconContainer = document.querySelector("#icons");
+        icons.forEach((icon)=>{
+            iconContainer.innerHTML += skillTemplate(icon);
+        })
     }
 }
 

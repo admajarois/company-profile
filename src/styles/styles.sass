@@ -37,9 +37,12 @@ body
     flex-direction: column;
     background-color: $darkColor;
 
+main
+    flex: 1;
+
 .bg
     &-gradient-first
-        @include gradient($pinkColor , #361e9827 , vertical );
+        @include gradient($pinkColor , $purpleColor , vertical );
 
     &-gradient-second
         @include gradient($celestialblueColor, $purpleColor , vertical);
@@ -53,6 +56,19 @@ body
     &-gradient-fifth
         @include gradient($lincolnGreenColor, $limegreenColor, vertical);
     
+    &-gradient-six
+        @include gradient($junglegreenColor, $iguanagreenColor , vertical);
+    
+    &-gradient-seven
+        @include gradient($iguanagreenColor, $limegreenColor , vertical);
+    
+    &-gradient-eight
+        @include gradient($barnredColor, $purpleColor, vertical)
+        
+        
+        
+        
+    
 
 .hero-bg
     background-color: #1c7851;
@@ -61,6 +77,16 @@ body
     background-position: right bottom;
     background-blend-mode: multiply;
     background-size: 70vh;
+
+.hero-custom
+    min-height: 50vh;
+    .custom-hero
+        flex: 1;
+    
+.about-section
+    position: absolute;
+    top: 30vh;
+    left: 10vmax;
 
     
     

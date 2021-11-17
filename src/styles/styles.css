@@ -17,9 +17,15 @@ body {
   background-color: #1B1B1B;
 }
 
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .bg-gradient-first {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f389dc), to(#361e9827));
-  background: linear-gradient(to bottom, #f389dc, #361e9827);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f389dc), to(#361E98));
+  background: linear-gradient(to bottom, #f389dc, #361E98);
 }
 
 .bg-gradient-second {
@@ -42,6 +48,21 @@ body {
   background: linear-gradient(to bottom, #084A06, #3DC53A);
 }
 
+.bg-gradient-six {
+  background: -webkit-gradient(linear, left top, left bottom, from(#30AD8F), to(#71B880));
+  background: linear-gradient(to bottom, #30AD8F, #71B880);
+}
+
+.bg-gradient-seven {
+  background: -webkit-gradient(linear, left top, left bottom, from(#71B880), to(#3DC53A));
+  background: linear-gradient(to bottom, #71B880, #3DC53A);
+}
+
+.bg-gradient-eight {
+  background: -webkit-gradient(linear, left top, left bottom, from(#700808), to(#361E98));
+  background: linear-gradient(to bottom, #700808, #361E98);
+}
+
 .hero-bg {
   background-color: #1c7851;
   background-image: url("/hero.png");
@@ -49,5 +70,21 @@ body {
   background-position: right bottom;
   background-blend-mode: multiply;
   background-size: 70vh;
+}
+
+.hero-custom {
+  min-height: 50vh;
+}
+
+.hero-custom .custom-hero {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.about-section {
+  position: absolute;
+  top: 30vh;
+  left: 10vmax;
 }
 /*# sourceMappingURL=styles.css.map */
