@@ -17,7 +17,7 @@ $barnredColor: #700808;
 $sealBrownColor: #592406;
 $animalColor: #A31C13;
 $fulvousColor: #DA7E12;
-$imageURL: url('/hero.png');
+$imageURL: url('/hero_512.png');
 
 @mixin gradient($startColor, $endColor, $orientation)
     @if $orientation == 'vertical'
@@ -63,20 +63,15 @@ main
         @include gradient($iguanagreenColor, $limegreenColor , vertical);
     
     &-gradient-eight
-        @include gradient($barnredColor, $purpleColor, vertical)
-        
-        
-        
-        
-    
+        @include gradient($barnredColor, $purpleColor, vertical); 
 
 .hero-bg
-    background-color: #1c7851;
-    background-image: $imageURL;
+    background-color: #ffffff09;
+    background-image: linear-gradient(to bottom, rgba(243, 137, 220, 1), rgba(54, 30, 152, 0.10)), $imageURL;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-blend-mode: multiply;
-    background-size: 70vh;
+    
 
 .hero-custom
     min-height: 50vh;
@@ -87,6 +82,14 @@ main
     position: absolute;
     top: 30vh;
     left: 10vmax;
+
+.contact-section
+    position: relative;
+    min-height: 50vh;
+
+.contact-section-child
+    position: absolute;
+    top: 0;
 
     
     
